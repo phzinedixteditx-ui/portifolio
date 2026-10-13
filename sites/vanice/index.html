@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANICE | Private Estates</title>
+  <meta name="description" content="Coleção privada de coberturas e residências autorais na orla do Rio de Janeiro e Costa Verde.">
+  
+  <!-- Tailwind CSS CDN para utilitários -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: '#0b0d10',
+            surface: '#101317',
+            gold: '#cbb28d',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom Minimalist Styles -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-[#0b0d10] text-[#f5f5f4] font-sans antialiased selection:bg-[#cbb28d]/20 selection:text-[#cbb28d]">
+
+  <!-- Linha de Progresso Superior & Cursor Editorial -->
+  <div id="top-scroll-line" class="top-scroll-line"></div>
+  <div id="luxury-cursor" class="luxury-cursor hidden md:flex"><span class="luxury-cursor-label">VER</span></div>
+
+  <!-- ======================================================================
+       1. ENTRADA EDITORIAL DE LUXO (VANICE)
+       ====================================================================== -->
+  <div id="entrance-screen" class="entrance-screen" onclick="enterSite()">
+    <div class="entrance-container">
+      
+      <span class="entrance-badge">COLEÇÃO PRIVADA 2026</span>
+      
+      <h1 class="entrance-name font-serif whitespace-nowrap">VANICE</h1>
+      
+      <p class="entrance-sub font-sans">Residências de Exceção · Rio de Janeiro</p>
+      
+      <div class="entrance-divider"></div>
+
+      <div class="entrance-cta">
+        <span class="entrance-action-text">Clique para entrar na coleção</span>
+        <svg class="w-3.5 h-3.5 text-[#cbb28d] mx-auto mt-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7"></path>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       2. HEADER EDITORIAL (CLEAN & FLOATING)
+       ====================================================================== -->
+  <header id="main-header" class="header-glass fixed top-0 left-0 right-0 z-50 py-7">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      
+      <!-- Marca -->
+      <a href="#" onclick="replayEntrance(event)" class="group" title="Rever Apresentação Vanice">
+        <span class="text-xl md:text-2xl font-serif tracking-[0.25em] text-white font-light group-hover:text-[#cbb28d] transition-colors duration-500">VANICE</span>
+      </a>
+
+      <!-- Navegação Discreta -->
+      <nav class="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-luxury text-[#9ca3af] font-light">
+        <a href="#colecao" class="hover:text-white transition-colors duration-300">Coleção</a>
+        <a href="#manifesto" class="hover:text-white transition-colors duration-300">Sobre</a>
+        <a href="#ambientes" class="hover:text-white transition-colors duration-300">Ambientes</a>
+        <a href="#contato" class="hover:text-white transition-colors duration-300">Contato</a>
+      </nav>
+
+      <!-- Ação Direta -->
+      <div class="flex items-center gap-6">
+        <a href="#contato" class="text-[11px] uppercase tracking-luxury text-[#cbb28d] hover:text-white transition-colors duration-300">
+          Atendimento Private
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. HERO CINEMATOGRÁFICO & FLUIDO
+       ====================================================================== -->
+  <section class="relative h-screen w-full flex items-end pb-20 md:pb-28 overflow-hidden">
+    <!-- Slides de Fundo com Transição Suave -->
+    <div id="hero-slider" class="absolute inset-0 z-0"></div>
+
+    <!-- Gradiente Editorial Suave -->
+    <div class="hero-gradient z-10 pointer-events-none"></div>
+
+    <!-- Conteúdo em Camadas com Tipografia de Alta Costura -->
+    <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
+      <div class="max-w-3xl space-y-4">
+        
+        <p id="hero-tagline" class="text-[11px] uppercase tracking-luxury text-[#cbb28d] font-light transition-opacity duration-700">
+          Ipanema · Posto 10
+        </p>
+
+        <h1 id="hero-heading" class="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-white leading-[1.05] tracking-wide transition-all duration-700">
+          Penthouse Al Mare
+        </h1>
+
+        <p id="hero-subheading" class="text-base sm:text-lg text-[#e5cdab] font-light max-w-xl tracking-wide transition-all duration-700">
+          680 m² com living aberto e horizonte definitivo para o Atlântico.
+        </p>
+
+        <div class="pt-4 flex items-center gap-4">
+          <button id="hero-dossier-btn" class="btn-clean-primary">
+            Explorar Residência
+          </button>
+          <a href="#colecao" class="btn-clean-outline">
+            Ver Coleção
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Rodapé do Hero Clean e Discreto (Sem barras de carregamento) -->
+      <div class="mt-16 pt-6 border-t border-white/[0.06] flex items-center justify-between text-[11px] tracking-luxury uppercase text-[#787f89] font-light">
+        <span>Curadoria Exclusiva Off-Market</span>
+        <span class="hidden sm:inline">Sigilo Assegurado sob Protocolo NDA</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       4. A COLEÇÃO VANICE (MINIMALIST EDITORIAL GRID)
+       ====================================================================== -->
+  <section id="colecao" class="py-28 md:py-36 max-w-7xl mx-auto px-6 md:px-12">
+    
+    <!-- Cabeçalho de Seção com Muito Espaço para Respirar -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="space-y-2">
+        <span class="text-[11px] uppercase tracking-luxury text-[#cbb28d]">Curadoria 2026</span>
+        <h2 class="text-3xl md:text-5xl font-serif font-light text-white tracking-wide">
+          Residências & Coberturas
+        </h2>
+      </div>
+
+      <!-- Abas de Categoria Minimalistas -->
+      <div id="filter-tabs" class="flex flex-wrap items-center gap-6 md:gap-8 border-b border-white/[0.08] pb-1">
+        <button class="filter-tab active" data-filter="all">Todas as Obras</button>
+        <button class="filter-tab" data-filter="Ipanema">Ipanema</button>
+        <button class="filter-tab" data-filter="Leblon,Gávea">Leblon & Gávea</button>
+        <button class="filter-tab" data-filter="Copacabana">Copacabana</button>
+        <button class="filter-tab" data-filter="Joá">Joá</button>
+        <button class="filter-tab" data-filter="Costa Verde">Costa Verde</button>
+        <button class="filter-tab" data-filter="Jardim Botânico,Barra">Jardim Botânico & Barra</button>
+      </div>
+    </div>
+
+    <!-- Grid Respirado de Imóveis -->
+    <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+      <!-- Injetado dinamicamente via app.js -->
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       5. MANIFESTO & O OLHAR VANICE (SPLIT EDITORIAL)
+       ====================================================================== -->
+  <section id="manifesto" class="py-24 md:py-32 border-t border-white/[0.07] bg-[#101317]">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Foto com Moldura Nobre -->
+        <div class="lg:col-span-6 reveal-on-scroll">
+          <div class="property-img-wrapper aspect-[4/3] rounded-sm overflow-hidden">
+            <img src="./assets/images/residencia-sunset-infinity.jpg" alt="Vila Horizon Sunset" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] tracking-luxury uppercase text-[#787f89] mt-3">Vila Horizon Sunset — Borda Infinita sobre o Oceano</p>
+        </div>
+
+        <!-- Texto Editorial -->
+        <div class="lg:col-span-6 space-y-8 reveal-on-scroll">
+          <div class="space-y-3">
+            <span class="text-[11px] uppercase tracking-luxury text-[#cbb28d]">O Olhar Vanice</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white leading-[1.15]">
+              A arquitetura como extensão natural da paisagem.
+            </h2>
+          </div>
+
+          <p class="text-sm md:text-base text-[#9ca3af] font-light leading-relaxed">
+            A <strong>VANICE</strong> opera como um ateliê imobiliário de alta discrição. Nossa coleção não busca quantidade, mas a união rara entre posição geográfica insubstituível, volumetria arquitetônica pura e materiais que dialogam com a luz do Rio.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-white/[0.08]">
+            <div class="space-y-1">
+              <span class="text-xs uppercase tracking-luxury text-white font-medium">Off-Market</span>
+              <p class="text-[12px] text-[#787f89] font-light">Negociações sem exposição pública.</p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs uppercase tracking-luxury text-white font-medium">Confidencial</span>
+              <p class="text-[12px] text-[#787f89] font-light">Protocolos rigorosos de sigilo.</p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs uppercase tracking-luxury text-white font-medium">Autoral</span>
+              <p class="text-[12px] text-[#787f89] font-light">Projetos de grandes mestres.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. AMBIENTES ASSINADOS (INTERIORES EM DESTAQUE)
+       ====================================================================== -->
+  <section id="ambientes" class="py-28 md:py-36 max-w-7xl mx-auto px-6 md:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-2 reveal-on-scroll">
+      <span class="text-[11px] uppercase tracking-luxury text-[#cbb28d]">A Curadoria de Interiores</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-light text-white">
+        O Detalhe que Transforma o Espaço
+      </h2>
+      <p class="text-xs md:text-sm text-[#787f89] font-light">
+        A seleção de salas de banho, suítes presidenciais e espaços gastronômicos concebidos para o bem-estar absoluto.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Detalhe 1: Suíte Master -->
+      <div class="space-y-3 cursor-pointer group reveal-on-scroll" onclick="openDrawer('grand-suite-leblon')">
+        <div class="property-img-wrapper aspect-[4/3] rounded-sm">
+          <img src="./assets/images/suite-master-mar.jpg" alt="Grand Suite Leblon">
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-luxury text-[#cbb28d]">Suíte Presidencial</span>
+          <h3 class="text-xl font-serif text-white font-light group-hover:text-[#cbb28d] transition-colors">Grand Suite Leblon</h3>
+          <p class="text-xs text-[#787f89] font-light">Esquadrias piso-teto deslizantes sobre a linha d'água.</p>
+        </div>
+      </div>
+
+      <!-- Detalhe 2: Spa & Banho -->
+      <div class="space-y-3 cursor-pointer group reveal-on-scroll" onclick="openDrawer('spa-bath-pavilion')">
+        <div class="property-img-wrapper aspect-[4/3] rounded-sm">
+          <img src="./assets/images/spa-banho-oceano.jpg" alt="Spa & Bath Ocean Pavilion">
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-luxury text-[#cbb28d]">Sala de Banho & Spa</span>
+          <h3 class="text-xl font-serif text-white font-light group-hover:text-[#cbb28d] transition-colors">Spa Ocean Pavilion</h3>
+          <p class="text-xs text-[#787f89] font-light">Banheira de imersão voltada para o mar e a copa das árvores.</p>
+        </div>
+      </div>
+
+      <!-- Detalhe 3: Cozinha do Chef -->
+      <div class="space-y-3 cursor-pointer group reveal-on-scroll" onclick="openDrawer('cozinha-gourmet-chef')">
+        <div class="property-img-wrapper aspect-[4/3] rounded-sm">
+          <img src="./assets/images/cozinha-gourmet-minimalista.jpg" alt="Espaço Gastronômico do Chef">
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-luxury text-[#cbb28d]">Espaço Gastronômico</span>
+          <h3 class="text-xl font-serif text-white font-light group-hover:text-[#cbb28d] transition-colors">Cozinha Minimalista</h3>
+          <p class="text-xs text-[#787f89] font-light">Bancada monolítica em quartzo e eletros de precisão.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. CONTATO & AGENDAMENTO PRIVATE (CLEAN & AIRY)
+       ====================================================================== -->
+  <section id="contato" class="py-28 md:py-36 border-t border-white/[0.07] bg-[#101317]">
+    <div class="max-w-3xl mx-auto px-6 text-center space-y-12">
+      
+      <div class="space-y-3 reveal-on-scroll">
+        <span class="text-[11px] uppercase tracking-luxury text-[#cbb28d]">Atendimento Confidencial</span>
+        <h2 class="text-3xl md:text-5xl font-serif font-light text-white">
+          Inicie um Diálogo Privado
+        </h2>
+        <p class="text-xs sm:text-sm text-[#9ca3af] font-light max-w-lg mx-auto leading-relaxed">
+          Para compradores e proprietários que valorizam discrição estrita. Um private advisor entrará em contato de forma silenciosa e dedicada.
+        </p>
+      </div>
+
+      <form id="clean-contact-form" class="space-y-8 text-left reveal-on-scroll">
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div>
+            <label class="block text-[10px] uppercase tracking-luxury text-[#787f89]">Seu Nome Completo</label>
+            <input type="text" name="name" required placeholder="Como prefere ser chamado" class="clean-input">
+          </div>
+          <div>
+            <label class="block text-[10px] uppercase tracking-luxury text-[#787f89]">Telefone / WhatsApp</label>
+            <input type="tel" name="phone" required placeholder="+55 (21) 99999-9999" class="clean-input">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] uppercase tracking-luxury text-[#787f89]">E-mail de Contato</label>
+          <input type="email" name="email" required placeholder="seu@email.com" class="clean-input">
+        </div>
+
+        <div>
+          <label class="block text-[10px] uppercase tracking-luxury text-[#787f89]">Imóvel de Interesse ou Solicitação</label>
+          <input type="text" name="message" placeholder="Ex: Coberturas na Vieira Souto ou Vila Horizon Sunset" class="clean-input">
+        </div>
+
+        <div id="contact-status" class="text-center text-xs text-[#cbb28d]"></div>
+
+        <div class="pt-4 text-center">
+          <button type="submit" class="btn-clean-primary px-12 py-4">
+            Solicitar Contato do Concierge
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. FOOTER EDITORIAL
+       ====================================================================== -->
+  <footer class="py-16 border-t border-white/[0.06] text-[#787f89] text-xs">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="font-serif text-white tracking-[0.25em] text-sm">VANICE</span>
+        <span class="text-[11px] block mt-1">© 2026 Vanice Private Estates. Todos os direitos reservados.</span>
+      </div>
+
+      <div class="flex items-center gap-8 text-[11px] tracking-luxury uppercase">
+        <a href="#colecao" class="hover:text-white transition-colors">Coleção</a>
+        <a href="#manifesto" class="hover:text-white transition-colors">Sobre</a>
+        <a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C+Concierge+Vanice." target="_blank" class="text-[#cbb28d] hover:text-white transition-colors">WhatsApp Concierge</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       9. GAVETA LATERAL / DRAWER DE DETALHES (SLIDE-OVER SUAVE)
+       ====================================================================== -->
+  <div id="property-drawer" class="drawer-backdrop" onclick="closeDrawer(event)">
+    <div class="drawer-panel" data-lenis-prevent onclick="event.stopPropagation()">
+      <div class="p-6 md:p-12 space-y-8" id="drawer-content">
+        <!-- Preenchido via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10. WHATSAPP CONCIERGE FLUTUANTE DISCRETO
+       ====================================================================== -->
+  <a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C+Concierge+Vanice.+Gostaria+de+um+atendimento+exclusivo." target="_blank" rel="noopener noreferrer" class="whatsapp-minimal">
+    <span class="w-1.5 h-1.5 rounded-full bg-[#cbb28d]"></span>
+    <span>Concierge</span>
+  </a>
+
+  <!-- Scripts: Lenis Smooth Scroll Engine + App -->
+  <script src="./assets/lenis.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

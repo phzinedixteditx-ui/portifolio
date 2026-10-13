@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXA — High Performance Internet</title>
+  
+  <meta name="description" content="NEXA Telecom. Conexão ultrarrápida em fibra óptica dedicada. Conectando você ao futuro na velocidade da luz.">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js (Local with CDN Fallback) -->
+  <script src="js/vendor/three.min.js"></script>
+  <script>if (typeof THREE === 'undefined') { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>'); }</script>
+</head>
+<body>
+
+  <!-- Minimalist Studio Magnetic Cursor -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <!-- Ambient Space Atmosphere Follower -->
+  <div class="ambient-nebula" id="ambient-nebula"></div>
+
+  <!-- ======================================================================
+       MINIMALIST STUDIO NAVIGATION (EXACTLY AS IN REFERENCE)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-title">NEXA</a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#planos" class="nav-item">Planos</a>
+        <a href="#infra" class="nav-item">Tecnologia</a>
+        <a href="#cobertura" class="nav-item">Cobertura</a>
+        <a href="https://wa.me/5511999999999" target="_blank" class="nav-item nav-cta">Let's talk</a>
+      </nav>
+
+      <button class="nav-burger" id="nav-burger" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       HERO (EXACT RECREATION OF REFERENCE IMAGE)
+       ====================================================================== -->
+  <section class="hero-stage">
+    
+    <!-- Left Column: Typography with Orchestrated Load Transitions -->
+    <div class="hero-copy-col">
+      
+      <h1 class="hero-display-title">
+        <span class="row-boost hero-anim-row" style="--anim-delay: 0.15s;">
+          BOOST <span class="hero-sphere-dot"></span>
+        </span>
+        <span class="row-solid hero-anim-row" style="--anim-delay: 0.30s;">YOUR</span>
+        <span class="row-solid hero-anim-row" style="--anim-delay: 0.45s;">SPEED</span>
+      </h1>
+
+      <p class="hero-editorial-sub hero-anim-fade" style="--anim-delay: 0.65s;">
+        Criamos <strong>experiências digitais</strong> na interseção entre <strong>fibra pura</strong> e <strong>tecnologia</strong>, ajudando nossos clientes a <strong>imaginar o futuro</strong>, hoje.
+      </p>
+
+      <div class="hero-action-line hero-anim-fade" style="--anim-delay: 0.80s;">
+        <a href="#planos" class="cta-link-primary">Conhecer Planos</a>
+        <span class="cta-sep">/</span>
+        <a href="#cobertura" class="cta-link-secondary">Consultar CEP</a>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Massive 3D Particle Rocket -->
+    <div class="hero-canvas-col">
+      <div id="rocket-canvas-container"></div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       EDITORIAL MANIFESTO (STAGE 01 - SCROLL REVEAL)
+       ====================================================================== -->
+  <section class="manifesto-section reveal-stage">
+    <div class="section-container">
+      <div class="manifesto-grid">
+        <div class="manifesto-eyebrow reveal-item" style="--item-index: 0;">A NOVA VELOCIDADE</div>
+        <div class="manifesto-text">
+          <p class="lead-phrase reveal-item" style="--item-index: 1;">
+            Conexão não é apenas largura de banda. É estabilidade absoluta, latência imperceptível e engenharia invisível trabalhando para você 24 horas por dia.
+          </p>
+          <p class="sub-phrase reveal-item" style="--item-index: 2;">
+            Construímos uma rede 100% em fibra óptica monomodo subterrânea com conexão direta aos principais pontos de troca de tráfego do país. Sem limites de franquia, sem oscilações de sinal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       PLANS SECTION (STAGE 02 - SCROLL REVEAL & STAGGER)
+       ====================================================================== -->
+  <section class="editorial-plans-section reveal-stage" id="planos">
+    <div class="section-container">
+      
+      <div class="section-header-clean reveal-item" style="--item-index: 0;">
+        <span class="label-index">01 / DISPONIBILIDADE</span>
+        <h2 class="title-clean">Planos Dedicados</h2>
+      </div>
+
+      <div class="plans-editorial-grid">
+        
+        <!-- Plan 1: 400 Mega -->
+        <div class="plan-editorial-card reveal-item" style="--item-index: 1;">
+          <div class="plan-card-top">
+            <span class="plan-code">TIER_01</span>
+            <span class="plan-category">RESIDENCIAL</span>
+          </div>
+
+          <div class="plan-speed-num">400 <span class="unit">Mbps</span></div>
+          <p class="plan-desc">Navegação fluida, streaming simultâneo em alta definição e estabilidade para múltiplos cômodos.</p>
+
+          <div class="plan-price-block">
+            <span class="currency">R$</span>
+            <span class="val">79</span>
+            <span class="cents">,90</span>
+            <span class="per">/mês</span>
+          </div>
+
+          <ul class="plan-specs-list">
+            <li><span>✓</span> 400 Mbps Download & Upload Simétrico</li>
+            <li><span>✓</span> Roteador Dual-Band Gigabit Incluso</li>
+            <li><span>✓</span> Instalação Expressa Gratuita</li>
+            <li><span>✓</span> Tráfego 100% Ilimitado</li>
+          </ul>
+
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20NEXA!%20Gostaria%20de%20assinar%20o%20plano%20400%20Mega." target="_blank" class="btn-plan-action">
+            Assinar Plano 400M →
+          </a>
+        </div>
+
+        <!-- Plan 2: 700 Mega (Featured) -->
+        <div class="plan-editorial-card is-featured reveal-item" style="--item-index: 2;">
+          <div class="plan-card-top">
+            <span class="plan-code">TIER_02</span>
+            <span class="plan-category highlight">PRO GAMER & STREAM</span>
+          </div>
+
+          <div class="plan-speed-num">700 <span class="unit">Mbps</span></div>
+          <p class="plan-desc">Desenvolvido para gamers competitivos e criadores de conteúdo que exigem latência mínima e rota direta.</p>
+
+          <div class="plan-price-block">
+            <span class="currency">R$</span>
+            <span class="val">99</span>
+            <span class="cents">,90</span>
+            <span class="per">/mês</span>
+          </div>
+
+          <ul class="plan-specs-list">
+            <li><span>✓</span> 700 Mbps Download & Upload Simétrico</li>
+            <li><span>✓</span> Rota Direta Gamer (Ping &lt; 2ms)</li>
+            <li><span>✓</span> Roteador Wi-Fi 6 de Longo Alcance Incluso</li>
+            <li><span>✓</span> Instalação Prioritária em até 24h</li>
+            <li><span>✓</span> Suporte Técnico Direto 24/7</li>
+          </ul>
+
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20NEXA!%20Gostaria%20de%20assinar%20o%20plano%20700%20Mega%20Pro." target="_blank" class="btn-plan-action action-featured">
+            Assinar Plano 700M →
+          </a>
+        </div>
+
+        <!-- Plan 3: 1 Giga -->
+        <div class="plan-editorial-card reveal-item" style="--item-index: 3;">
+          <div class="plan-card-top">
+            <span class="plan-code">TIER_03</span>
+            <span class="plan-category">HYPER EXTREME</span>
+          </div>
+
+          <div class="plan-speed-num">1.000 <span class="unit">Mbps</span></div>
+          <p class="plan-desc">O limite máximo da fibra óptica. Para residências conectadas de alta densidade e escritórios exigentes.</p>
+
+          <div class="plan-price-block">
+            <span class="currency">R$</span>
+            <span class="val">129</span>
+            <span class="cents">,90</span>
+            <span class="per">/mês</span>
+          </div>
+
+          <ul class="plan-specs-list">
+            <li><span>✓</span> 1.000 Mbps de Banda Real Dedicada</li>
+            <li><span>✓</span> Sistema Wi-Fi 6 Mesh Alta Densidade</li>
+            <li><span>✓</span> Suporte para +40 dispositivos sem oscilar</li>
+            <li><span>✓</span> Atendimento VIP com Gerente Dedicado</li>
+          </ul>
+
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20NEXA!%20Gostaria%20de%20assinar%20o%20plano%201%20Giga." target="_blank" class="btn-plan-action">
+            Assinar Plano 1 Giga →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       ENGINEERING SPECS SHEET (STAGE 03 - SCROLL REVEAL)
+       ====================================================================== -->
+  <section class="specs-section reveal-stage" id="infra">
+    <div class="section-container">
+      
+      <div class="section-header-clean reveal-item" style="--item-index: 0;">
+        <span class="label-index">02 / ARQUITETURA</span>
+        <h2 class="title-clean">Especificações de Engenharia</h2>
+      </div>
+
+      <div class="specs-table">
+        <div class="spec-row reveal-item" style="--item-index: 1;">
+          <div class="spec-name">Topologia de Acesso</div>
+          <div class="spec-value">FTTH 100% Pura (Fiber To The Home) — cabo óptico monomodo direto na ONT</div>
+        </div>
+        <div class="spec-row reveal-item" style="--item-index: 2;">
+          <div class="spec-name">Latência para IX.br (São Paulo)</div>
+          <div class="spec-value">Média de 1.8ms a 2.4ms sem jitter com rota direta de backbone</div>
+        </div>
+        <div class="spec-row reveal-item" style="--item-index: 3;">
+          <div class="spec-name">Equipamento Fornecido</div>
+          <div class="spec-value">Roteador Wi-Fi 6 (802.11ax) com tecnologia OFDMA, Beamforming e MU-MIMO</div>
+        </div>
+        <div class="spec-row reveal-item" style="--item-index: 4;">
+          <div class="spec-name">Disponibilidade de Rede (SLA)</div>
+          <div class="spec-value">99.98% de Uptime com redundância de anéis de fibra e proteção contra quedas</div>
+        </div>
+        <div class="spec-row reveal-item" style="--item-index: 5;">
+          <div class="spec-name">Banda Simétrica</div>
+          <div class="spec-value">100% da velocidade garantida tanto no download quanto no upload</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       COVERAGE CHECKER (STAGE 04 - SCROLL REVEAL)
+       ====================================================================== -->
+  <section class="coverage-section reveal-stage" id="cobertura">
+    <div class="section-container">
+      <div class="coverage-editorial-box">
+        
+        <div class="coverage-left reveal-item" style="--item-index: 1;">
+          <span class="label-index">03 / COBERTURA</span>
+          <h2 class="coverage-headline">Consulte Viabilidade Técnica</h2>
+          <p class="coverage-lead">
+            Digite seu CEP para verificar a presença de nossa rede subterrânea no seu endereço.
+          </p>
+        </div>
+
+        <div class="coverage-right reveal-item" style="--item-index: 2;">
+          <div class="clean-search-form">
+            <input type="text" id="cep-input" class="minimal-input" placeholder="Digite seu CEP (00000-000)" maxlength="9">
+            <button id="btn-check-cep" class="minimal-btn">Consultar</button>
+          </div>
+          <div id="cep-result" class="cep-result-container"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       EDITORIAL FOOTER (STAGE 05 - SCROLL REVEAL)
+       ====================================================================== -->
+  <footer class="editorial-footer reveal-stage">
+    <div class="section-container">
+      <div class="footer-layout reveal-item" style="--item-index: 1;">
+        <div class="footer-left">
+          <a href="#" class="footer-logo">NEXA</a>
+          <p class="footer-desc">
+            Rede de hiperconectividade em fibra óptica. Projetada com precisão para elevar o padrão digital.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <span class="footer-col-title">Planos</span>
+            <a href="#planos">400 Mega</a>
+            <a href="#planos">700 Mega Pro</a>
+            <a href="#planos">1 Giga Hyper</a>
+          </div>
+
+          <div class="footer-col">
+            <span class="footer-col-title">Rede</span>
+            <a href="#infra">Infraestrutura</a>
+            <a href="#cobertura">Cobertura</a>
+            <a href="https://wa.me/5511999999999" target="_blank">Atendimento 24h</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-line reveal-item" style="--item-index: 2;">
+        <p>&copy; 2026 NEXA Telecomunicações Ltda. Todos os direitos reservados.</p>
+        <p>Aceleração 3D WebGL em tempo real.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/particles-rocket.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
